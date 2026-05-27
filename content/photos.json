@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "morning-mist",
+    "title": "晨雾",
+    "image": "photos/2024/11/morning-mist.jpg",
+    "date": "2024-11-15",
+    "location": "黄山",
+    "story": "那天凌晨四点摸黑上山，山道只被头灯照亮几米。等到了观景台，天色刚破晓——整条山谷浸在雾里，像一幅未干的水墨画。远处山脊若隐若现，松树的轮廓在雾气中变得柔和。快门声在寂静中格外清脆，那一刻觉得，早起的困倦都值了。",
+    "album": "shan-chuan-ji-xing",
+    "camera": "Leica M6",
+    "lens": "Summicron 35mm f/2"
+  },
+  {
+    "slug": "corner",
+    "title": "转角",
+    "image": "photos/2025/01/corner.jpg",
+    "date": "2025-01-20",
+    "location": "泉州",
+    "story": "在泉州西街闲逛，无意拐进一条小巷。石板路被岁月磨得发亮，老阿嬷坐在门口择菜，阳光从屋檐间漏下来，刚好落在她银白的头发上。她没有注意到我，只是不紧不慢地做着手里的活儿。这个城市的节奏，就藏在这些转角里。",
+    "album": "city-walks",
+    "camera": "Fujifilm X-T5",
+    "lens": "XF 23mm f/1.4"
+  },
+  {
+    "slug": "afternoon-light",
+    "title": "午后",
+    "image": "photos/2025/03/afternoon-light.jpg",
+    "date": "2025-03-08",
+    "location": "家中",
+    "story": "春天的午后，光透过百叶窗在墙上画出整齐的条纹。猫咪蜷在光斑里打盹，偶尔翻个身，调整一下晒太阳的角度。烧了一壶水，泡了杯茶，看热气在光束里缓缓上升。这样的下午什么都不想做，只想像猫一样，被阳光裹着。",
+    "album": null,
+    "camera": "Leica M6",
+    "lens": "Summicron 50mm f/2"
+  },
+  {
+    "slug": "sunset-time",
+    "title": "日落时分",
+    "image": "photos/2024/09/sunset-time.jpg",
+    "date": "2024-09-12",
+    "location": "厦门",
+    "story": "在海边等到了一整个夏天的日落。天空从橙红渐变到粉紫，海面成了巨大的镜子。有人在沙滩上弹吉他，琴声混在海浪声里，像一首慵懒的歌。太阳沉下去的那一刻，所有人都安静了两秒，然后不知谁带头鼓起了掌。",
+    "album": "city-walks",
+    "camera": "Fujifilm X-T5",
+    "lens": "XF 56mm f/1.2"
+  },
+  {
+    "slug": "eaves",
+    "title": "檐",
+    "image": "photos/2024/04/eaves.jpg",
+    "date": "2024-04-05",
+    "location": "京都",
+    "story": "四月的京都，到处都是樱花和人潮。我反而更爱抬头看那些古寺的飞檐——曲线优美，檐角微微上翘，像要飞走。青瓦上积了些昨夜的雨，偶尔滴下一滴，在石阶上溅开一小朵水花。",
+    "album": "shan-chuan-ji-xing",
+    "camera": "Leica M6",
+    "lens": "Summicron 35mm f/2"
+  },
+  {
+    "slug": "forest-path",
+    "title": "林间道",
+    "image": "photos/2024/10/forest-path.jpg",
+    "date": "2024-10-20",
+    "location": "四姑娘山",
+    "story": "十月的川西，秋色正浓。徒步路上经过一段松林，松针落了满地，踩上去软软的。阳光穿过树冠洒下来，把林间小路切成了斑驳的光影。停下来拍了这张，同行的人在前面喊我，声音在林子里回荡。",
+    "album": "shan-chuan-ji-xing",
+    "camera": "Leica M6",
+    "lens": "Summicron 50mm f/2"
+  },
+  {
+    "slug": "outside-the-window",
+    "title": "窗外",
+    "image": "photos/2025/02/outside-the-window.jpg",
+    "date": "2025-02-14",
+    "location": "上海",
+    "story": "在上海住的民宿，窗外是一片老弄堂。晾衣杆上挂着五颜六色的衣服，像万国旗。下午的光把影子拉得很长，有人在阳台上浇花，水管里洒出的水在空气里画了一道小彩虹。我在窗边看了很久。",
+    "album": "city-walks",
+    "camera": "Fujifilm X-T5",
+    "lens": "XF 23mm f/1.4"
+  },
+  {
+    "slug": "after-rain",
+    "title": "雨后",
+    "image": "photos/2024/06/after-rain.jpg",
+    "date": "2024-06-15",
+    "location": "杭州",
+    "story": "六月杭州的雨说下就下，说停就停。雨刚收住，地面还湿着，倒映着一整片天空。路边的栀子花被雨水打湿，香气反而更浓了。蹲下来拍倒影的时候，差点踩进水坑里。",
+    "album": null,
+    "camera": "Leica M6",
+    "lens": "Summicron 35mm f/2"
+  },
+  {
+    "slug": "camel-shadows",
+    "title": "驼影",
+    "image": "photos/2024/08/camel-shadows.jpg",
+    "date": "2024-08-28",
+    "location": "敦煌",
+    "story": "鸣沙山上，驼队排成一列走在沙脊上。太阳快落下去了，把骆驼的影子拉得又长又扁，投射在起伏的沙丘上，像一幅皮影戏。骑骆驼的游客说说笑笑，但镜头里，只有这些被拉长的影子讲述着丝路的故事。",
+    "album": "shan-chuan-ji-xing",
+    "camera": "Fujifilm X-T5",
+    "lens": "XF 23mm f/1.4"
+  },
+  {
+    "slug": "after-snow",
+    "title": "雪后",
+    "image": "photos/2025/01/after-snow.jpg",
+    "date": "2025-01-05",
+    "location": "哈尔滨",
+    "story": "零下三十度的哈尔滨，呼出的气瞬间结成冰晶。中央大街上，积雪被踩实了，走起来咯吱咯吱响。马迭尔冰棍摊前依然排着长队——在冰天雪地里吃冰棍，大概只有东北人才觉得理所当然。手指快冻僵了，但还是忍不住多按了几下快门。",
+    "album": "city-walks",
+    "camera": "Fujifilm X-T5",
+    "lens": "XF 16mm f/1.4"
+  },
+  {
+    "slug": "catnap",
+    "title": "午后小憩",
+    "image": "photos/2025/04/catnap.jpg",
+    "date": "2025-04-03",
+    "location": "家中",
+    "story": "四月阳光正好，家里的猫又占领了窗台上最暖的位置。它把脸埋进爪子里，尾巴偶尔懒洋洋地摆一下。光线透过窗帘洒在它身上，每一根毛都泛着金边。这种时刻，相机的声音都要调到最轻，生怕吵醒了它。",
+    "album": null,
+    "camera": "Leica M6",
+    "lens": "Summicron 50mm f/2"
+  },
+  {
+    "slug": "mirror-lake",
+    "title": "镜",
+    "image": "photos/2024/07/mirror-lake.jpg",
+    "date": "2024-07-22",
+    "location": "西湖",
+    "story": "夏季傍晚的西湖，风停了的几分钟里，湖面真的平如镜。对岸的雷峰塔、天边的晚霞、近处的垂柳，全都对称地映在水里。等了好久才等到无风的瞬间——按下快门的那一刻，远处有只水鸟掠过，在水面上画了一道细细的涟漪。",
+    "album": null,
+    "camera": "Leica M6",
+    "lens": "Summicron 35mm f/2"
+  }
+]

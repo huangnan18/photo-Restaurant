@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾光 · 摄影集</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Long+Cang&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6f0;
+    --card: #fffef9;
+    --text: #3d3226;
+    --muted: #8b7e6a;
+    --accent: #c75b39;
+    --border-light: #e5ddd0;
+    --shadow: rgba(60, 40, 20, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: var(--bg);
+    /* 极淡纸纹 */
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    color: var(--text);
+    font-family: Georgia, 'Noto Serif SC', 'Times New Roman', serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ===== Header ===== */
+  .site-header {
+    text-align: center;
+    padding: 64px 24px 48px;
+  }
+  .site-title {
+    font-family: 'Playfair Display', 'Noto Serif SC', serif;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .site-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+    letter-spacing: 0.08em;
+  }
+  .site-nav {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.25s;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+  }
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ===== Masonry ===== */
+  .masonry {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    columns: 3;
+    column-gap: 28px;
+  }
+
+  /* ===== Polaroid Card ===== */
+  .polaroid {
+    break-inside: avoid;
+    margin-bottom: 36px;
+    background: var(--card);
+    padding: 10px 10px 38px 10px;
+    box-shadow:
+      0 1px 3px var(--shadow),
+      0 6px 16px var(--shadow),
+      0 1px 0 var(--border-light) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  /* 模拟手工摆放的轻微旋转 */
+  .polaroid:nth-child(odd)  { transform: rotate(-1.2deg); }
+  .polaroid:nth-child(even) { transform: rotate(0.8deg); }
+  .polaroid:nth-child(3n)   { transform: rotate(1.5deg); }
+  .polaroid:nth-child(5n)   { transform: rotate(-0.6deg); }
+  .polaroid:nth-child(7n)   { transform: rotate(0.3deg); }
+
+  .polaroid:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow:
+      0 2px 6px var(--shadow),
+      0 12px 32px rgba(60, 40, 20, 0.2);
+    z-index: 2;
+    position: relative;
+  }
+
+  .polaroid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* 胶片微褪色 */
+    filter: contrast(0.96) saturate(0.9);
+  }
+  .polaroid:hover img {
+    filter: contrast(1) saturate(1);
+    transition: filter 0.4s;
+  }
+
+  .polaroid .caption {
+    padding: 12px 6px 0;
+    text-align: center;
+  }
+  .polaroid .caption .title {
+    font-family: 'Long Cang', 'Noto Serif SC', cursive;
+    font-size: 20px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .polaroid .caption .meta {
+    margin-top: 4px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    font-style: italic;
+  }
+
+  /* ===== Footer ===== */
+  .site-footer {
+    text-align: center;
+    padding: 40px 24px 64px;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .site-footer .divider {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--border-light);
+    margin: 0 auto 24px;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .masonry {
+      columns: 2;
+      column-gap: 20px;
+    }
+    .polaroid {
+      margin-bottom: 28px;
+      padding: 8px 8px 32px 8px;
+    }
+    .site-nav { gap: 24px; }
+  }
+
+  @media (max-width: 560px) {
+    .masonry {
+      columns: 1;
+    }
+    .polaroid {
+      margin-bottom: 32px;
+      transform: rotate(-0.8deg) !important;
+    }
+    .polaroid:nth-child(even) { transform: rotate(0.6deg) !important; }
+    .site-header { padding: 48px 20px 36px; }
+    .site-title { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1 class="site-title">拾光</h1>
+  <p class="site-subtitle">a photography journal</p>
+  <nav class="site-nav">
+    <a href="#" class="active">照片</a>
+    <a href="#">相册</a>
+    <a href="#">关于</a>
+  </nav>
+</header>
+
+<main class="masonry">
+
+  <!-- 1. 横幅风景 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/landscape1/800/500" alt="晨雾中的山谷" loading="lazy">
+    <div class="caption">
+      <div class="title">晨雾</div>
+      <div class="meta">黄山 · 2024.11</div>
+    </div>
+  </div>
+
+  <!-- 2. 竖幅人像比例 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/portrait1/600/800" alt="老街转角" loading="lazy">
+    <div class="caption">
+      <div class="title">转角</div>
+      <div class="meta">泉州 · 2025.01</div>
+    </div>
+  </div>
+
+  <!-- 3. 方形 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/square1/700/700" alt="午后光影" loading="lazy">
+    <div class="caption">
+      <div class="title">午后</div>
+      <div class="meta">家中 · 2025.03</div>
+    </div>
+  </div>
+
+  <!-- 4. 横幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/landscape2/800/530" alt="海边的日落" loading="lazy">
+    <div class="caption">
+      <div class="title">日落时分</div>
+      <div class="meta">厦门 · 2024.09</div>
+    </div>
+  </div>
+
+  <!-- 5. 竖幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/portrait2/600/900" alt="古寺飞檐" loading="lazy">
+    <div class="caption">
+      <div class="title">檐</div>
+      <div class="meta">京都 · 2024.04</div>
+    </div>
+  </div>
+
+  <!-- 6. 横幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/landscape3/800/480" alt="山间小路" loading="lazy">
+    <div class="caption">
+      <div class="title">林间道</div>
+      <div class="meta">四姑娘山 · 2024.10</div>
+    </div>
+  </div>
+
+  <!-- 7. 方形 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/square2/700/700" alt="咖啡馆窗外" loading="lazy">
+    <div class="caption">
+      <div class="title">窗外</div>
+      <div class="meta">上海 · 2025.02</div>
+    </div>
+  </div>
+
+  <!-- 8. 横幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/landscape4/800/550" alt="雨后街道" loading="lazy">
+    <div class="caption">
+      <div class="title">雨后</div>
+      <div class="meta">杭州 · 2024.06</div>
+    </div>
+  </div>
+
+  <!-- 9. 竖幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/portrait3/600/850" alt="沙漠驼影" loading="lazy">
+    <div class="caption">
+      <div class="title">驼影</div>
+      <div class="meta">敦煌 · 2024.08</div>
+    </div>
+  </div>
+
+  <!-- 10. 横幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/landscape5/800/520" alt="雪后清晨" loading="lazy">
+    <div class="caption">
+      <div class="title">雪后</div>
+      <div class="meta">哈尔滨 · 2025.01</div>
+    </div>
+  </div>
+
+  <!-- 11. 方形 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/square3/700/700" alt="猫在窗台" loading="lazy">
+    <div class="caption">
+      <div class="title">午后小憩</div>
+      <div class="meta">家中 · 2025.04</div>
+    </div>
+  </div>
+
+  <!-- 12. 竖幅 -->
+  <div class="polaroid">
+    <img src="https://picsum.photos/seed/portrait4/600/750" alt="湖面倒影" loading="lazy">
+    <div class="caption">
+      <div class="title">镜</div>
+      <div class="meta">西湖 · 2024.07</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span class="divider"></span>
+  用镜头记录行走的光
+</footer>
+
+</body>
+</html>
