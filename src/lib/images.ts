@@ -1,5 +1,3 @@
-const isDev = process.env.NODE_ENV === "development";
-
 function slugFromPath(imagePath: string): string {
   const base = imagePath.split("/").pop() || "";
   return base.replace(/\.[^.]+$/, "");
@@ -10,12 +8,6 @@ export function getPhotoUrl(
   width: number = 800,
   format: "webp" | "jpg" = "webp"
 ): string {
-  // Picsum placeholders during development
-  if (isDev) {
-    const seed = imagePath.replace(/[^a-zA-Z0-9]/g, "").slice(0, 10);
-    const height = Math.round(width * 0.7);
-    return `https://picsum.photos/seed/${seed}/${width}/${height}`;
-  }
   const slug = slugFromPath(imagePath);
   return `/images/${slug}-${width}w.${format}`;
 }
