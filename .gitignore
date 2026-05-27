@@ -41,7 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# original photos & generated images
+# original photos only (optimized images are committed)
 originals/
-public/images/
 src/lib/lqip.json
