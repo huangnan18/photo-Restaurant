@@ -2,13 +2,15 @@
 @import "./custom.css";
 
 @theme {
-  --color-bg: #faf6f0;
-  --color-card: #fffef9;
-  --color-text: #3d3226;
-  --color-muted: #8b7e6a;
-  --color-accent: #c75b39;
-  --color-border: #e5ddd0;
-  --color-shadow: rgba(60, 40, 20, 0.12);
+  --color-bg: #f4ede0;
+  --color-card: #fdfaf2;
+  --color-text: #3a2818;
+  --color-muted: #8c7a64;
+  --color-accent: #c25a32;
+  --color-border: #e0d4c0;
+  --color-shadow: rgba(50, 30, 15, 0.15);
+  --color-ink: #2c1d0e;
+  --color-lightleak: #e8c873;
 
   --font-playfair: "Playfair Display", Georgia, serif;
   --font-noto-serif: "Noto Serif SC", serif;
