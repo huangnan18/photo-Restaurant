@@ -119,6 +119,4 @@ Vercel 检测到 push 后自动构建部署。`npm run build` 包含图片优化
 
 ## 致谢
 
-- [Next.js](https://nextjs.org) — 构建框架
-- [sharp](https://sharp.pixelplumbing.com) — 图片优化引擎
-- [Vercel](https://vercel.com) — 托管与 CDN
+感谢每一位驻足的观众。这些光影碎片，因你的目光而完整。
