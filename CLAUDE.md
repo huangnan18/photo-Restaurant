@@ -17,6 +17,20 @@ npx vercel --prod    # 部署到生产环境
 - **Images**: sharp-optimized multi-size WebP/JPEG in `public/images/`, committed to git, served via Vercel CDN
 - **No client state**: Only `SiteHeader` is a client component (for `usePathname`). All pages are Server Components.
 
+## Refactor · Darkroom Film Style (planned, not yet implemented)
+
+Visual-only restyle from "warm Polaroid scrapbook" → "darkroom film negative". **Architecture, data model, routes, image pipeline, SSG all unchanged — design layer only.** Full spec in `SPEC.md`.
+
+Decided:
+1. **Nav** → left vertical sidebar (was top-centered). `layout.tsx` gets a flex shell: `<SiteSidebar />` + `<div class="content">{children}</div>`; collapses to top bar ≤900px. `SiteHeader.tsx` → `SiteSidebar.tsx` (stays a client component).
+2. **Story page** → darkroom contact-print style (was handwritten letter). Drop lined-paper / red margin / Long Cang; dark bg + gold-brown title + EXIF sign-off.
+
+Token swap (`globals.css` `@theme`): `--color-bg #15110d`, `--color-card #211b14`, `--color-frame #0c0a07`, `--color-text #e7ddcb`, `--color-ink #f2ead8`, `--color-muted #8f8472`, `--color-accent #c8a45e`, `--color-border rgba(200,164,94,0.18)`. Remove `--font-long-cang`.
+
+`custom.css` rework: grain `mix-blend-mode` → `overlay` (multiply goes black on dark bg); add full-page 35mm `.film-frame` (sprocket strips + `KODAK PORTRA 400`, desktop only); `.polaroid` → near-black frame + `border-radius:4px`, **drop nth-child rotation** (orderly contact-print), drop sepia; `.letter` → contact-print; `.photo-nav` → outlined buttons + `01 / 12` frame counter.
+
+Not in scope: thumbnail filmstrip, category filters (additive features).
+
 ## Content Model
 
 ### `content/photos.json`

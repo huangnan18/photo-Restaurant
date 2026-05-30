@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import SiteHeader from "@/components/SiteHeader";
+import SiteSidebar from "@/components/SiteSidebar";
 import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
 
@@ -26,14 +26,21 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Noto+Serif+SC:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Long+Cang&family=Noto+Serif+SC:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <div className="film-frame" aria-hidden="true">
+          <span className="stock">Kodak Portra 400 · 拾光</span>
+        </div>
+        <div className="shell">
+          <SiteSidebar />
+          <div className="content">
+            {children}
+            <SiteFooter />
+          </div>
+        </div>
       </body>
     </html>
   );

@@ -28,6 +28,10 @@ export default async function PhotoDetailPage({ params }: Props) {
   const photo = getPhotoBySlug(slug);
   if (!photo) notFound();
 
+  const all = getAllPhotos();
+  const frameIndex = all.findIndex((p) => p.slug === slug);
+  const frameNo = String(frameIndex + 1).padStart(2, "0");
+  const frameTotal = String(all.length).padStart(2, "0");
   const { prev, next } = getAdjacentPhotos(slug);
 
   return (
@@ -49,6 +53,12 @@ export default async function PhotoDetailPage({ params }: Props) {
               {photo.location && `${photo.location} · `}
               {formatDate(photo.date)}
             </div>
+            {photo.camera && (
+              <div className="exif">
+                {photo.camera}
+                {photo.lens ? ` · ${photo.lens}` : ""}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -80,22 +90,25 @@ export default async function PhotoDetailPage({ params }: Props) {
         </LetterLayout>
       )}
 
-      {/* Prev / Next navigation */}
+      {/* Prev / Next navigation — frame counter */}
       <nav className="photo-nav">
-        <div>
-          {prev && (
-            <Link href={`/photo/${prev.slug}`}>
-              &larr; {prev.title}
-            </Link>
-          )}
-        </div>
-        <div>
-          {next && (
-            <Link href={`/photo/${next.slug}`}>
-              {next.title} &rarr;
-            </Link>
-          )}
-        </div>
+        {prev ? (
+          <Link href={`/photo/${prev.slug}`} className="nav-btn">
+            &larr; {prev.title}
+          </Link>
+        ) : (
+          <span className="nav-btn empty">&larr;</span>
+        )}
+        <span className="frame-counter">
+          {frameNo} <span className="total">/ {frameTotal}</span>
+        </span>
+        {next ? (
+          <Link href={`/photo/${next.slug}`} className="nav-btn">
+            {next.title} &rarr;
+          </Link>
+        ) : (
+          <span className="nav-btn empty">&rarr;</span>
+        )}
       </nav>
     </article>
   );

@@ -2,20 +2,21 @@
 @import "./custom.css";
 
 @theme {
-  --color-bg: #f4ede0;
-  --color-card: #fdfaf2;
-  --color-text: #3a2818;
-  --color-muted: #8c7a64;
-  --color-accent: #c25a32;
-  --color-border: #e0d4c0;
-  --color-shadow: rgba(50, 30, 15, 0.15);
-  --color-ink: #2c1d0e;
+  --color-bg: #15110d;
+  --color-card: #211b14;
+  --color-frame: #0c0a07;
+  --color-text: #e7ddcb;
+  --color-muted: #8f8472;
+  --color-accent: #c8a45e;
+  --color-border: rgba(200, 164, 94, 0.18);
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-ink: #f2ead8;
   --color-lightleak: #e8c873;
 
   --font-playfair: "Playfair Display", Georgia, serif;
   --font-noto-serif: "Noto Serif SC", serif;
   --font-georgia: Georgia, "Noto Serif SC", "Times New Roman", serif;
-  --font-long-cang: "Long Cang", cursive;
+  --font-handwriting: "Caveat", "Long Cang", cursive;
 }
 
 body {

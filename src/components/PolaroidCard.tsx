@@ -29,6 +29,12 @@ export default function PolaroidCard({
           {photo.location && `${photo.location} · `}
           {formatDate(photo.date)}
         </div>
+        {photo.camera && (
+          <div className="exif">
+            {photo.camera}
+            {photo.lens ? ` · ${photo.lens}` : ""}
+          </div>
+        )}
       </div>
     </Link>
   );
